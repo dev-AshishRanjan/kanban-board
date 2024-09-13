@@ -1,11 +1,11 @@
 import React, { useMemo } from 'react';
-import Card from '../Card';
+import Card from '../Card/index.tsx';
 import "./column.css"
 import { GrAdd } from 'react-icons/gr';
 import { LuMoreHorizontal } from 'react-icons/lu';
 import { Ticket, User } from '../../interfaces';
-import { getPriorityIcon, getStatusIcon } from '../../utils/helper';
-import UserIcon from '../UserIcon';
+import { getPriorityIcon, getStatusIcon } from '../../lib/helper.tsx';
+import UserIcon from '../UserIcon/index.tsx';
 
 
 function Column({ tickets, grouping, groupBy, userIdToData }: { tickets: Ticket[], grouping: string, groupBy: string, userIdToData: Record<string, User> }) {
@@ -45,7 +45,7 @@ function Column({ tickets, grouping, groupBy, userIdToData }: { tickets: Ticket[
                 </div>
             </div>
             <div className='cards-container'>
-                {tickets.map((ticket: Ticket) => <Card key={ticket.id} ticket={ticket} userData={userIdToData[ticket.userId]} hideStatusIcon={grouping === "status"} hideProfileIcon={grouping === "user"} />)}
+                {tickets.map((ticket: Ticket) => <Card key={ticket.id} ticket={ticket} userData={userIdToData[ticket.userId]} hideStatusIcon={grouping === "status"} hideProfileIcon={grouping === "user"} hidePriorityIcon={grouping === "priority"} />)}
             </div>
         </div>
     );

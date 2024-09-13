@@ -1,6 +1,6 @@
 import React, { useCallback, useMemo } from 'react';
 import './grid.css'
-import Column from '../Column/Column';
+import Column from '../Column/Column.tsx';
 import { Ticket, User } from '../../interfaces';
 
 function Grid({ gridData, grouping, userIdToData }: { gridData: Record<string, Ticket[]>, grouping: string, userIdToData: Record<string, User> }) {

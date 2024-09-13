@@ -3,6 +3,7 @@
     padding: 0.75rem 1rem;
     box-shadow: 0 0 0.5rem #12121221;
     background-color: #fff;
+    width: 15rem;
 }
 .card .ticket-id {
     color: #6b6f76;
@@ -10,9 +11,16 @@
     font-weight: bold;
 }
 .card .title {
+    display: inline-block;
     color: #282a2f;
     font-size: 0.75rem;
     font-weight: bold;
+    text-overflow: ellipsis;
+    height: 5ch;
+    overflow: hidden;
+    /* -webkit-line-clamp: 1;
+    -webkit-box-orient: horizontal; */
+    /* white-space: nowrap; */
 }
 .card .middle-container {
     display: flex;
@@ -70,5 +78,7 @@
 @media screen and (max-width:700px) {
     .card {
         min-width: fit-content;
+        width: 20rem !important;
+        max-width: 20rem !important;
     }
 }

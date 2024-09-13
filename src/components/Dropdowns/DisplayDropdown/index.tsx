@@ -32,9 +32,10 @@ function DisplayDropdown({ grouping, setGrouping, ordering, setOrdering }: { gro
   return (
     <div className='display-dropdown' ref={componentRef}>
       <div className='dropdown-label-container' onClick={openDropdown}>
-        <LuSettings2 color='#6b6f76' />
+        {/* <LuSettings2 color='#6b6f76' /> */}
+        <img src="/icons/icons_FEtask/Display.svg" alt="" />
         <div className='dropdown-label'>Display</div>
-        <BiChevronDown color='#6b6f76' />
+        <img src="/icons/icons_FEtask/down.svg" alt="" />
       </div>
       <div className={`dropdown-content-container ${visible && "visible"}`}>
         <div className='dropdown-content-row'>

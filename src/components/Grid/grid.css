@@ -1,6 +1,6 @@
 .grid {
     min-height: calc(100vh - 60px); /* Header height: 60px */
-    background-color: #f4f5f8;
+    background-color: #f4f5f9;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 2rem;

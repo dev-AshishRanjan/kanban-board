@@ -46,7 +46,7 @@ export const mapUsersByUserId = (users: User[]) => {
     return group;
 };
 
-const getPriotityLabel = (priority: number) => {
+export const getPriotityLabel = (priority: number) => {
     switch (priority) {
         case 0: return "No priority";
         case 1: return "Low";
